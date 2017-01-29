@@ -1,5 +1,7 @@
 # Bundled jq
 
+[![](https://images.microbadger.com/badges/image/nimmis/jq.svg)](https://microbadger.com/images/nimmis/jq "Get your own image badge on microbadger.com")
+
 This container are a minimal container with jq installed. Used för remote script where jq is not avaliable or you can't install it localy
 
 Using this container as the jq command, using the **-rm** throws the container when used
