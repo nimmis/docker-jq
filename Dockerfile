@@ -8,13 +8,12 @@ ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="nimmis <kjell.havneskold@gmail.com>" \
-      org.label-schema.schema-version="build #11" \
       org.label-schema.docker.dockerfile="/Dockerfile" \
-      org.label-schema.name="docker label inspector in a container" \
+      org.label-schema.name="jq bundled in a container" \
       org.label-schema.url="https://www.nimmis.nu" \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/nimmis/docker-label-inspector.git"
+      org.label-schema.vcs-url="https://github.com/nimmis/docker-jq.git"
 
 RUN apk update && apk upgrade && \
 
@@ -27,4 +26,4 @@ RUN apk update && apk upgrade && \
     #clear cache
     rm -rf /var/cache/apk/*
 
-#ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/jq"]
